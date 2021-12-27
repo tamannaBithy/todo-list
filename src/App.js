@@ -19,24 +19,27 @@ function App() {
   }, [todos])
 
   return (
-    <div className="App border border-indigo-600">
+    <div className="App">
 
-      <Header></Header>
+      <div className="border rounded shadow-lg shadow-teal-200/50 w-1/2 p-12 mt-32 mx-auto bg-teal-50">
 
-      <Form
-        input={input}
-        setInput={setInput}
-        todos={todos}
-        setTodos={setTodos}
-        editTodos={editTodos}
-        setEditTodos={setEditTodos}
-      ></Form>
+        <Header></Header>
 
-      <TodoList
-        todos={todos}
-        setTodos={setTodos}
-        setEditTodos={setEditTodos}
-      ></TodoList>
+        <Form
+          input={input}
+          setInput={setInput}
+          todos={todos}
+          setTodos={setTodos}
+          editTodos={editTodos}
+          setEditTodos={setEditTodos}
+        ></Form>
+
+        <TodoList
+          todos={todos}
+          setTodos={setTodos}
+          setEditTodos={setEditTodos}
+        ></TodoList>
+      </div>
 
     </div>
   );

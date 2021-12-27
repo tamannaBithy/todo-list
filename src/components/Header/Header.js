@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <h1>Todo-List</h1>
+            <p class="text-4xl font-bold pb-12">Lets Dunch Todo-List</p>
         </div>
     );
 };

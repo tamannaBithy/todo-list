@@ -29,27 +29,30 @@ const TodoList = ({ todos, setTodos, setEditTodos }) => {
         <div>
             {
                 todos.map(todo => (
-                    <li key={todo.id}>
+
+                    <ul key={todo.id} className="mt-8 grid grid-cols-2 gap-4 content-center border-b-2 border-dotted">
                         <input
                             type="text"
                             value={todo.title}
                             onChange={e => e.preventDefault()}
-                            className={`${todo.completed ? "line-through" : ""}`}
+                            className={` bg-teal-50 p-2 text-2xl  ${todo.completed ? "line-through" : ""}`}
                         />
 
                         <div>
                             <button onClick={() => handleComplete(todo)}>
-                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-check-circle pr-5 text-green-700 text-xl hover:text-2xl"></i>
                             </button>
                             <button onClick={() => handleEdit(todo)}>
-                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-edit pr-5 text-amber-600 text-xl hover:text-2xl"></i>
                             </button>
                             <button onClick={() => handleDelete(todo)}>
-                                <i class="far fa-trash-alt"></i>
+                                <i class="far fa-trash-alt text-xl text-red-700 hover:text-2xl"></i>
                             </button>
                         </div>
 
-                    </li>
+                    </ul>
+
+
                 ))
             }
         </div>
