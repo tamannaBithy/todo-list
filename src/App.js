@@ -8,6 +8,7 @@ function App() {
 
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
+  const [editTodos, setEditTodos] = useState(null);
 
   return (
     <div className="App border border-indigo-600">
@@ -19,13 +20,14 @@ function App() {
         setInput={setInput}
         todos={todos}
         setTodos={setTodos}
-
+        editTodos={editTodos}
+        setEditTodos={setEditTodos}
       ></Form>
 
       <TodoList
         todos={todos}
         setTodos={setTodos}
-
+        setEditTodos={setEditTodos}
       ></TodoList>
 
     </div>
